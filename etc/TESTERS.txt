@@ -1,0 +1,36 @@
+# Installing Dependencies
+
+## Install Java
+Make sure your terminal is running **Java 1.8**
+To check:
+    Run `javac -v`
+See [this page](https://stackoverflow.com/questions/21964709/how-to-set-or-change-the-default-java-jdk-version-on-os-x/30875847) for how to change this on macOS
+Note that if you use a different Java version (i.e., v11), you will get obscure `pom.xml` errors that have nothing to do with the Java version.
+
+<<insert instructions for windows>> @dan how did you do this on windows?
+
+## Install Maven
+
+### macOS
+Run `brew install maven` if you have Homebrew installed
+Check you’re around version 3.6.1 by running `mvn -v`.
+### Windows
+Follow the instructions on the [maven website](https://maven.apache.org/install.html)
+Check you’re around version 3.6.1 by running `mvn -v`.
+
+# Running the Project
+
+After `cd`-ing into the root project directory, run
+```shell
+mvn compile:exec java
+```
+This will compile and run the server locally on port `4567`.
+To access it, go to `localhost:4567` in your browser.
+
+# Specific Changes to Our Program
+
+For the first launch of the program, *before* going to the home screen, if the user attempts to access the following pages, they should be redirected to the home screen:
+/game
+/signin
+
+As a note, we also fell behind on sprint 2 cards -- many are partially complete. This is why the acceptance test plan has a lot of greyed out squares!
